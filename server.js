@@ -1,5 +1,8 @@
 const express = require("express");
 const morgan = require("morgan");
+const donateRouter = require("./routes/donateRouter");
+const loginRouter = require("./routes/loginRouter");
+const registerRouter = require("./routes/registerRouter");
 
 const hostname = "localhost";
 const port = 3000;
