@@ -13,9 +13,8 @@ donateRouter
     res.end("Will send all the donation options to you");
   })
   .post((req, res) => {
-    res.end(
-      `Will add the foundation receiving the donation: ${req.body.name} in the amount of: $${req.body.description}`
-    );
+    res.statusCode = 403;
+    res.end(`POST operation not available`);
   })
   .put((req, res) => {
     res.statusCode = 403;
@@ -38,8 +37,9 @@ donateRouter
   })
 
   .post((req, res) => {
-    res.statusCode = 403;
-    res.end(`POST operation not supported on /donate/${req.params.donateId}`);
+    res.end(
+      `Will add the foundation receiving the donation: ${req.body.name} with id: ${req.params.donateId} in the amount of: $${req.body.description}`
+    );
   })
 
   .put((req, res) => {

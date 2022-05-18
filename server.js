@@ -13,8 +13,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 app.use("/donate", donateRouter);
-app.use("/login", loginRouter);
-app.use("/register", registerRouter);
+// app.use("/login", loginRouter);
+// app.use("/register", registerRouter);
 
 app.use(express.static(__dirname + "/public"));
 
